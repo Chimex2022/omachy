@@ -31,6 +31,10 @@ const destinations = [
   { city: 'Mexico City', country: 'Mexico', image: 'https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?auto=format&fit=crop&w=1000&q=85' },
 ];
 
+function LogoMark() {
+  return <svg className="logo-art" viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M50.8 18.3 36.3 26l-11.6-2.7-4.8 3.1 10.1 4.4-8.6 6.6-5.1-1.2-3.3 2.3 8.1 4.6 4.9 8 2.3-3.3-1.2-5 6.7-8.7 4.4 10 3-4.7-2.7-11.6 7.8-14.4c1-1.9-.9-3.8-2.7-2.8Z"/><path d="M12 51c11 5 25 3 36-5" fill="none" stroke="#102d5b" strokeWidth="3" strokeLinecap="round"/></svg>;
+}
+
 function App() {
   const [menu, setMenu] = React.useState(false);
   const year = new Date().getFullYear();
@@ -41,7 +45,7 @@ function App() {
   return <main>
     <section className="hero" id="home">
       <nav className="nav wrap">
-        <a className="brand" href="#home"><span className="brand-mark"><Plane size={20}/></span><span>Omachy<span className="accent">.</span></span></a>
+        <a className="brand" href="#home"><span className="brand-mark"><LogoMark/></span><span>Omachy<span className="accent">.</span></span></a>
         <div className={menu ? 'nav-links show' : 'nav-links'}>
           <a href="#home">Home</a><a href="#services">Services</a><a href="#destinations">Destinations</a><a href="#about">About us</a>
         </div>
